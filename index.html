@@ -1,19 +1,12 @@
-
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NWS 6-Month Roadmap | bgood media</title>
+  <title>NWS 6-Month Execution Checklist | bgood media</title>
   <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
       min-height: 100vh;
@@ -23,17 +16,12 @@ Copy
       padding: 40px 20px;
     }
     
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
+    .container { max-width: 1400px; margin: 0 auto; }
     
-    /* Header */
     .header {
       max-width: 1200px;
       margin: 0 auto 50px;
       text-align: center;
-      position: relative;
     }
     
     .header-line {
@@ -80,12 +68,8 @@ Copy
       font-size: 16px;
       color: #A0A3A6;
       font-weight: 300;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
     }
     
-    /* Phase Legend */
     .phases {
       max-width: 900px;
       margin: 0 auto 40px;
@@ -102,11 +86,6 @@ Copy
       padding: 8px 16px;
       background: rgba(255,255,255,0.02);
       border-radius: 30px;
-      transition: transform 0.3s ease;
-    }
-    
-    .phase-item:hover {
-      transform: scale(1.05);
     }
     
     .phase-dot {
@@ -126,10 +105,8 @@ Copy
       font-family: 'Outfit', sans-serif;
       font-size: 10px;
       color: #666;
-      font-weight: 300;
     }
     
-    /* Timeline */
     .timeline {
       max-width: 1100px;
       margin: 0 auto 20px;
@@ -143,21 +120,18 @@ Copy
       background: linear-gradient(90deg, #C59433 0%, #587597 50%, #7DA972 75%, #764A86 100%);
     }
     
-    /* Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
       gap: 24px;
       padding: 20px;
     }
     
-    /* Month Card */
     .month-card {
       background: linear-gradient(145deg, rgba(65,64,66,0.3) 0%, rgba(45,45,45,0.8) 100%);
       border-radius: 16px;
       padding: 28px;
       position: relative;
-      overflow: hidden;
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
     
@@ -173,7 +147,6 @@ Copy
       justify-content: center;
       font-family: 'Bellefair', serif;
       font-size: 22px;
-      font-weight: 400;
     }
     
     .phase-tag {
@@ -192,7 +165,6 @@ Copy
     
     .month-title {
       font-size: 26px;
-      font-weight: 400;
       margin: 0 0 4px;
       color: #D6CFC1;
       padding-right: 60px;
@@ -226,7 +198,6 @@ Copy
       font-family: 'Outfit', sans-serif;
       font-size: 13px;
       color: #D6CFC1;
-      font-weight: 400;
     }
     
     .deliverables-header {
@@ -239,24 +210,20 @@ Copy
     }
     
     .deliverable-item {
-      margin-bottom: 10px;
-    }
-    
-    .deliverable-item.has-sub {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     
     .deliverable-main {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
     }
     
     .deliverable-dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      margin-top: 6px;
+      margin-top: 7px;
       flex-shrink: 0;
     }
     
@@ -265,46 +232,52 @@ Copy
       font-size: 13px;
       color: #BBC3CD;
       line-height: 1.5;
-      font-weight: 400;
     }
     
     .deliverable-sub {
-      margin-left: 18px;
-      margin-top: 6px;
-      padding-left: 12px;
-      border-left: 2px solid rgba(160,163,166,0.2);
+      margin-left: 16px;
+      margin-top: 4px;
+      padding-left: 10px;
+      border-left: 2px solid rgba(160,163,166,0.15);
     }
     
     .deliverable-sub span {
       font-family: 'Outfit', sans-serif;
       font-size: 11px;
-      color: #888;
+      color: #777;
       line-height: 1.5;
-      font-weight: 300;
       font-style: italic;
     }
     
-    /* Homework Section */
+    .deadline {
+      display: inline-block;
+      background: rgba(197,148,51,0.25);
+      color: #CBB42F;
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    
     .homework-section {
-      background: linear-gradient(135deg, rgba(188,92,62,0.15) 0%, rgba(188,92,62,0.05) 100%);
-      border: 1px solid rgba(188,92,62,0.3);
+      background: linear-gradient(135deg, rgba(118,74,134,0.15) 0%, rgba(118,74,134,0.05) 100%);
+      border: 1px solid rgba(118,74,134,0.3);
       border-radius: 10px;
       padding: 16px;
       margin-top: 20px;
     }
     
     .homework-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     
     .homework-label {
       font-family: 'Outfit', sans-serif;
       font-size: 10px;
       letter-spacing: 2px;
-      color: #BC5C3E;
+      color: #764A86;
       font-weight: 600;
       text-transform: uppercase;
     }
@@ -313,7 +286,7 @@ Copy
       font-family: 'Outfit', sans-serif;
       font-size: 13px;
       color: #D6CFC1;
-      margin: 0 0 8px;
+      margin: 8px 0 6px;
       font-weight: 500;
     }
     
@@ -321,11 +294,11 @@ Copy
       display: flex;
       align-items: flex-start;
       gap: 8px;
-      margin-top: 6px;
+      margin-top: 5px;
     }
     
     .homework-arrow {
-      color: #BC5C3E;
+      color: #764A86;
       font-size: 8px;
       margin-top: 4px;
     }
@@ -335,10 +308,20 @@ Copy
       font-size: 12px;
       color: #A0A3A6;
       line-height: 1.5;
-      font-weight: 300;
     }
     
-    /* Footer Stats */
+    .homework-deadline {
+      display: inline-block;
+      background: rgba(118,74,134,0.3);
+      color: #a882b5;
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    
     .stats {
       max-width: 1000px;
       margin: 60px auto 0;
@@ -352,13 +335,10 @@ Copy
       gap: 24px;
     }
     
-    .stat-item {
-      text-align: center;
-    }
+    .stat-item { text-align: center; }
     
     .stat-value {
       font-size: 32px;
-      font-weight: 400;
       color: #CBB42F;
       margin-bottom: 4px;
     }
@@ -371,7 +351,6 @@ Copy
       text-transform: uppercase;
     }
     
-    /* Legend */
     .legend {
       max-width: 600px;
       margin: 30px auto 0;
@@ -398,8 +377,8 @@ Copy
       width: 12px;
       height: 12px;
       border-radius: 4px;
-      background: linear-gradient(135deg, rgba(188,92,62,0.4) 0%, rgba(188,92,62,0.2) 100%);
-      border: 1px solid #BC5C3E;
+      background: rgba(118,74,134,0.3);
+      border: 1px solid #764A86;
     }
     
     .legend-text {
@@ -408,7 +387,6 @@ Copy
       color: #888;
     }
     
-    /* Brand Footer */
     .brand-footer {
       text-align: center;
       margin-top: 50px;
@@ -423,17 +401,13 @@ Copy
       color: #555;
     }
     
-    /* Print Styles */
     @media print {
-      body {
-        background: #2D2D2D !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
-      
-      .month-card {
-        break-inside: avoid;
-      }
+      body { background: #2D2D2D !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      .month-card { break-inside: avoid; }
+    }
+    
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -447,7 +421,7 @@ Copy
         <div class="header-line-right"></div>
       </div>
       <h1>The Authority Engine</h1>
-      <p class="header-desc">A 6-Month Strategic Roadmap for Digital Excellence</p>
+      <p class="header-desc">6-Month Execution Checklist</p>
     </div>
 
     <!-- Phase Legend -->
@@ -474,22 +448,17 @@ Copy
       </div>
     </div>
 
-    <!-- Timeline -->
-    <div class="timeline">
-      <div class="timeline-line"></div>
-    </div>
+    <div class="timeline"><div class="timeline-line"></div></div>
 
-    <!-- Month Cards Grid -->
+    <!-- Month Cards -->
     <div class="grid">
       
-      <!-- Month 1 -->
+      <!-- MONTH 1 -->
       <div class="month-card" style="border: 1px solid rgba(197,148,51,0.3);">
         <div class="month-badge" style="background: linear-gradient(135deg, rgba(197,148,51,0.3) 0%, rgba(197,148,51,0.1) 100%); border: 2px solid #C59433; color: #C59433;">1</div>
-        <div class="phase-tag" style="background: rgba(197,148,51,0.2);">
-          <span style="color: #C59433;">FOUNDATION</span>
-        </div>
+        <div class="phase-tag" style="background: rgba(197,148,51,0.2);"><span style="color: #C59433;">FOUNDATION</span></div>
         <h3 class="month-title">Technical Handover</h3>
-        <p class="month-subtitle">& Show-Up Systems</p>
+        <p class="month-subtitle">& Show-Up Systems (February)</p>
         <div class="focus-area" style="border-left-color: #C59433;">
           <span class="focus-label">Focus: </span>
           <span class="focus-text">Infrastructure & Conversion Tech</span>
@@ -499,39 +468,46 @@ Copy
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">Infrastructure: Finalize Divi-to-Elementor/ACF migration ($1,750 allocation)</span>
+            <span class="deliverable-text"><strong>Infrastructure:</strong> Finalize Divi-to-Elementor/ACF migration ($1,750) <span class="deadline">Feb 27</span></span>
           </div>
+          <div class="deliverable-sub"><span>May require additional investment to buy a plugin or build out code for custom toolkit</span></div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">Conversion Tech: Set up GA4 and event tracking for all booking buttons</span>
+            <span class="deliverable-text"><strong>Conversion Tech:</strong> Set up GA4 and event tracking for all booking buttons <span class="deadline">Feb 20</span></span>
           </div>
+          <div class="deliverable-sub"><span>Tracking: form submission, "book a call" clicks</span></div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">GEO: Claim and optimize local map listings with NWS's new brand messaging</span>
+            <span class="deliverable-text"><strong>Design:</strong> Event page design work <span class="deadline">Feb 27</span></span>
           </div>
+          <div class="deliverable-sub"><span>Research tool/software. May require additional investment to buy a plugin or build out code</span></div>
         </div>
         
-        <div class="deliverable-item has-sub">
+        <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">GBP - Service Sync</span>
+            <span class="deliverable-text"><strong>GBP:</strong> Service Sync <span class="deadline">Feb 13</span></span>
           </div>
-          <div class="deliverable-sub">
-            <span>Every time we launch a new service page (e.g., Tax Planning), we add it to the "Services" section of GBP</span>
+          <div class="deliverable-sub"><span>Every time we launch a new service page (e.g., Tax Planning), we add it to the "Services" section of GBP. May need access. Also add info from "Branded Mail Packet" to our next post</span></div>
+        </div>
+        
+        <div class="deliverable-item">
+          <div class="deliverable-main">
+            <div class="deliverable-dot" style="background: #C59433;"></div>
+            <span class="deliverable-text"><strong>Infrastructure:</strong> "Are You Ready for Retirement?" Quiz <span class="deadline">Feb 27</span></span>
           </div>
+          <div class="deliverable-sub"><span>Add quiz to the website pages/lead capture options. <strong style="color:#e85d5d;">⚠️ Need content from NWS ASAP</strong></span></div>
         </div>
 
         <div class="homework-section">
-          <div class="homework-header">
-            <span class="homework-label">★ NWS Marketing Homework</span>
-          </div>
-          <p class="homework-title">The "Show-Up" Kit</p>
+          <div class="homework-header"><span class="homework-label">★ NWS Marketing Homework</span></div>
+          <p class="homework-title">The "Show-Up" Kit <span class="homework-deadline">Due Feb 27</span></p>
           <div class="homework-item">
             <span class="homework-arrow">▸</span>
             <span class="homework-text">Deploy automated SMS/Email reminder sequences</span>
@@ -543,14 +519,12 @@ Copy
         </div>
       </div>
 
-      <!-- Month 2 -->
+      <!-- MONTH 2 -->
       <div class="month-card" style="border: 1px solid rgba(197,148,51,0.3);">
         <div class="month-badge" style="background: linear-gradient(135deg, rgba(197,148,51,0.3) 0%, rgba(197,148,51,0.1) 100%); border: 2px solid #C59433; color: #C59433;">2</div>
-        <div class="phase-tag" style="background: rgba(197,148,51,0.2);">
-          <span style="color: #C59433;">FOUNDATION</span>
-        </div>
+        <div class="phase-tag" style="background: rgba(197,148,51,0.2);"><span style="color: #C59433;">FOUNDATION</span></div>
         <h3 class="month-title">Service Architecture</h3>
-        <p class="month-subtitle">The ProsperGuard Foundation</p>
+        <p class="month-subtitle">The ProsperGuard Blueprint (March)</p>
         <div class="focus-area" style="border-left-color: #C59433;">
           <span class="focus-label">Focus: </span>
           <span class="focus-text">Authority & Credibility</span>
@@ -560,138 +534,129 @@ Copy
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">Infrastructure: Finalize migration debt settlement ($1,750 allocation)</span>
+            <span class="deliverable-text"><strong>Infrastructure:</strong> Finalize migration debt settlement ($1,750 allocation)</span>
+          </div>
+          <div class="deliverable-sub"><span>Migration already complete – second payment processed in March</span></div>
+        </div>
+        
+        <div class="deliverable-item">
+          <div class="deliverable-main">
+            <div class="deliverable-dot" style="background: #C59433;"></div>
+            <span class="deliverable-text"><strong>Design:</strong> Author Page/Credentials (Establishing Ariel's E-E-A-T for Google/AI) <span class="deadline">Mar 20</span></span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">Design Author Credentials: Build the Official Author Page (Establishing Ariel's E-E-A-T for Google/AI)</span>
+            <span class="deliverable-text"><strong>Dev:</strong> Event page development <span class="deadline">Mar 31</span></span>
           </div>
+          <div class="deliverable-sub"><span>May require additional investment to buy plugin or build out code for custom toolkit</span></div>
         </div>
         
-        <div class="deliverable-item has-sub">
+        <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">Dev work on Event page</span>
-          </div>
-          <div class="deliverable-sub">
-            <span>May require additional investment to buy plugin or build out code for custom toolkit</span>
+            <span class="deliverable-text"><strong>SEO/GEO:</strong> Initial technical optimization of all new pages for "Local Authority" keywords</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">SEO/GEO: Initial technical optimization of all new pages for "Local Authority" keywords</span>
+            <span class="deliverable-text"><strong>GBP:</strong> "What's New" Post (2x) <span class="deadline">Mar 13</span> & <span class="deadline">Mar 27</span></span>
           </div>
+          <div class="deliverable-sub"><span>Strip the Hook from our monthly articles and turn it into a 150-word tip</span></div>
         </div>
         
-        <div class="deliverable-item has-sub">
+        <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #C59433;"></div>
-            <span class="deliverable-text">GBP - "What's New" Post (2x)</span>
-          </div>
-          <div class="deliverable-sub">
-            <span>Strip the Hook from our monthly articles and turn it into a 150-word tip</span>
+            <span class="deliverable-text"><strong>Paid Media:</strong> Possible Meta Ads setup to prime ad account with brand awareness campaigns <span class="deadline">Mar 20*</span></span>
           </div>
         </div>
 
         <div class="homework-section">
-          <div class="homework-header">
-            <span class="homework-label">★ NWS Marketing Homework</span>
-          </div>
-          <p class="homework-title">Develop Content for book landing page</p>
+          <div class="homework-header"><span class="homework-label">★ NWS Marketing Homework</span></div>
+          <p class="homework-title">Develop Content for Book Landing Page <span class="homework-deadline">Due Mar 20</span></p>
           <div class="homework-item">
             <span class="homework-arrow">▸</span>
-            <span class="homework-text">Graphics, topics, titles, etc.</span>
+            <span class="homework-text">Graphics, topics, titles, etc. – hand over to us by the 20th</span>
           </div>
         </div>
       </div>
 
-      <!-- Month 3 -->
+      <!-- MONTH 3 -->
       <div class="month-card" style="border: 1px solid rgba(88,117,151,0.3);">
         <div class="month-badge" style="background: linear-gradient(135deg, rgba(88,117,151,0.3) 0%, rgba(88,117,151,0.1) 100%); border: 2px solid #587597; color: #587597;">3</div>
-        <div class="phase-tag" style="background: rgba(88,117,151,0.2);">
-          <span style="color: #587597;">BUILD</span>
-        </div>
+        <div class="phase-tag" style="background: rgba(88,117,151,0.2);"><span style="color: #587597;">BUILD</span></div>
         <h3 class="month-title">Lead Magnet</h3>
-        <p class="month-subtitle">& Book Launch (March Priority)</p>
+        <p class="month-subtitle">& Book Launch (April)</p>
         <div class="focus-area" style="border-left-color: #587597;">
           <span class="focus-label">Focus: </span>
           <span class="focus-text">Content & Conversion Assets</span>
         </div>
         <p class="deliverables-header">Key Deliverables</p>
         
-        <div class="deliverable-item has-sub">
+        <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">ProsperGuard Service Pages: Build out the primary service pillars</span>
-          </div>
-          <div class="deliverable-sub">
-            <span>Tax Planning, Estate Strategy, Risk Management</span>
+            <span class="deliverable-text"><strong>Tax Planning:</strong> Build out the primary service pillars</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">Start Design for Book Landing Page: Build and launch the dedicated page for the new book release</span>
+            <span class="deliverable-text"><strong>Start Design for Book Landing Page:</strong> Build and launch the dedicated page for the new book release</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">Content: 2 Authority Articles (Focus: Connecting the book themes to ProsperGuard)</span>
+            <span class="deliverable-text"><strong>Content:</strong> 2 Authority Articles (Focus: Connecting the book themes to ProsperGuard)</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">SEO/GEO: Internal linking strategy connecting service pages to the new lead magnets</span>
+            <span class="deliverable-text"><strong>SEO/GEO:</strong> Internal linking strategy connecting service pages to the new lead magnets</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">Conversion Tech: Review GA4 and event tracking. Identify areas to improve</span>
+            <span class="deliverable-text"><strong>Conversion Tech:</strong> Review GA4 and event tracking. Identify areas to improve</span>
           </div>
         </div>
         
-        <div class="deliverable-item has-sub">
+        <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">GBP - Photo Uploads (1x per week)</span>
+            <span class="deliverable-text"><strong>GBP:</strong> Photo uploads (1x per week)</span>
           </div>
-          <div class="deliverable-sub">
-            <span>Upload photos of the "Branded Mail Packet" or behind-the-scenes shot of Ariel prepping for a webinar</span>
-          </div>
+          <div class="deliverable-sub"><span>Upload photos of the "Branded Mail Packet" or behind-the-scenes shot of Ariel prepping for a webinar</span></div>
         </div>
 
         <div class="homework-section">
-          <div class="homework-header">
-            <span class="homework-label">★ NWS Marketing Homework</span>
-          </div>
+          <div class="homework-header"><span class="homework-label">★ NWS Marketing Homework</span></div>
           <p class="homework-title">Develop Content for additional service pages</p>
           <div class="homework-item">
             <span class="homework-arrow">▸</span>
-            <span class="homework-text">Risk Management, Assistance for Loved Ones, Cash Flow Management, Debt Management</span>
+            <span class="homework-text">Risk Management, Assistance for Loved Ones, Cash Flow Management, and Debt Management</span>
           </div>
         </div>
       </div>
 
-      <!-- Month 4 -->
+      <!-- MONTH 4 -->
       <div class="month-card" style="border: 1px solid rgba(88,117,151,0.3);">
         <div class="month-badge" style="background: linear-gradient(135deg, rgba(88,117,151,0.3) 0%, rgba(88,117,151,0.1) 100%); border: 2px solid #587597; color: #587597;">4</div>
-        <div class="phase-tag" style="background: rgba(88,117,151,0.2);">
-          <span style="color: #587597;">BUILD</span>
-        </div>
+        <div class="phase-tag" style="background: rgba(88,117,151,0.2);"><span style="color: #587597;">BUILD</span></div>
         <h3 class="month-title">Engagement</h3>
-        <p class="month-subtitle">& Events</p>
+        <p class="month-subtitle">& Events (May)</p>
         <div class="focus-area" style="border-left-color: #587597;">
           <span class="focus-label">Focus: </span>
           <span class="focus-text">Funnel Preparation</span>
@@ -701,72 +666,69 @@ Copy
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">Develop Book Landing Page: Based on design from previous month</span>
+            <span class="deliverable-text"><strong>Develop Book Landing Page:</strong> Based on design from the previous month</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">Design Lead Magnet: Build the "Retire in a Weekend" high-intent landing page</span>
+            <span class="deliverable-text"><strong>Design Lead Magnet:</strong> Build the "Retire in a Weekend" high-intent landing page</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">Ad Prep: Set up Meta Ad accounts, Pixel tracking, and creative assets for month 5 launch</span>
+            <span class="deliverable-text"><strong>Ad Prep:</strong> Set up Meta Ads accounts, Pixel tracking, and creative assets for Month 5 launch</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">Content: 2 Authority Articles (Focus: High-net-worth tax pain points)</span>
+            <span class="deliverable-text"><strong>Content:</strong> 2 Authority Articles (Focus: High net-worth tax pain points)</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">SEO/GEO: Optimization of service pages for "Generative Search" (answering specific AI queries)</span>
+            <span class="deliverable-text"><strong>SEO/GEO:</strong> Optimization of service pages for "Generative Search" (answering specific AI queries)</span>
           </div>
         </div>
         
-        <div class="deliverable-item has-sub">
+        <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #587597;"></div>
-            <span class="deliverable-text">GBP - Review Management (as needed)</span>
-          </div>
-          <div class="deliverable-sub">
-            <span>Respond to any new reviews within 48 hours, using local keywords like "Westwood financial planning"</span>
+            <span class="deliverable-text"><strong>GBP:</strong> Review Optimization – Nurture "Write us a Review!" conversation rates</span>
           </div>
         </div>
 
         <div class="homework-section">
-          <div class="homework-header">
-            <span class="homework-label">★ NWS Marketing Homework</span>
-          </div>
+          <div class="homework-header"><span class="homework-label">★ NWS Marketing Homework</span></div>
           <p class="homework-title">Lead Magnet & Ad Preparation</p>
           <div class="homework-item">
             <span class="homework-arrow">▸</span>
-            <span class="homework-text">Develop Content for Lead Magnet (Graphics and copy)</span>
+            <span class="homework-text">Develop Content for Lead Magnet (graphics and copy)</span>
           </div>
           <div class="homework-item">
             <span class="homework-arrow">▸</span>
             <span class="homework-text">Work on Ad copy ideas</span>
           </div>
+          <div class="homework-item">
+            <span class="homework-arrow">▸</span>
+            <span class="homework-text">Content for "A-Shares", "advisor deck", and "what it's like to work for NWS"</span>
+          </div>
         </div>
       </div>
 
-      <!-- Month 5 -->
+      <!-- MONTH 5 -->
       <div class="month-card" style="border: 1px solid rgba(125,169,114,0.3);">
         <div class="month-badge" style="background: linear-gradient(135deg, rgba(125,169,114,0.3) 0%, rgba(125,169,114,0.1) 100%); border: 2px solid #7DA972; color: #7DA972;">5</div>
-        <div class="phase-tag" style="background: rgba(125,169,114,0.2);">
-          <span style="color: #7DA972;">LAUNCH</span>
-        </div>
-        <h3 class="month-title">Traffic</h3>
-        <p class="month-subtitle">& Velocity (Ad Launch)</p>
+        <div class="phase-tag" style="background: rgba(125,169,114,0.2);"><span style="color: #7DA972;">LAUNCH</span></div>
+        <h3 class="month-title">Traffic & Velocity</h3>
+        <p class="month-subtitle">(Ad Launch) – June</p>
         <div class="focus-area" style="border-left-color: #7DA972;">
           <span class="focus-label">Focus: </span>
           <span class="focus-text">Paid Media Activation</span>
@@ -776,57 +738,67 @@ Copy
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #7DA972;"></div>
-            <span class="deliverable-text">Develop Lead Magnet: Build the "Retire in a Weekend" high-intent landing page</span>
+            <span class="deliverable-text"><strong>Develop Lead Magnet:</strong> Build the "Retire in a Weekend" high-intent landing page</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #7DA972;"></div>
-            <span class="deliverable-text">Paid Media: Launch Meta Ads (Facebook/Instagram) targeting $1M–$5M net worth demographics</span>
+            <span class="deliverable-text"><strong>OR</strong> (Can't do both on this budget):</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #7DA972;"></div>
-            <span class="deliverable-text">Funnel Optimization: Review "Retire in a Weekend" conversion rates; adjust copy for performance</span>
+            <span class="deliverable-text"><strong>Recruiting/Advisor Page:</strong> Tweak current Careers page into a "What It's Like to Work for NWS" + form + A-shares content</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #7DA972;"></div>
-            <span class="deliverable-text">Content: 2 Authority Articles (Focus: Case studies/Client success stories)</span>
+            <span class="deliverable-text"><strong>Paid Media:</strong> Launch Meta Ads (Facebook/Instagram) targeting $1M–$5M demographics</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #7DA972;"></div>
-            <span class="deliverable-text">SEO/GEO: External link-building outreach to industry-relevant directories and local news</span>
+            <span class="deliverable-text"><strong>Funnel Optimization:</strong> Review "Retire in a Weekend" conversion rates; adjust copy for performance</span>
           </div>
         </div>
         
-        <div class="deliverable-item has-sub">
+        <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #7DA972;"></div>
-            <span class="deliverable-text">GBP - "Financial Tips" Post (2x)</span>
+            <span class="deliverable-text"><strong>Content:</strong> 2 Authority Articles (Focus: Case studies/Client success stories)</span>
           </div>
-          <div class="deliverable-sub">
-            <span>Strip the Hook from our monthly articles and turn it into a 150-word tip</span>
+        </div>
+        
+        <div class="deliverable-item">
+          <div class="deliverable-main">
+            <div class="deliverable-dot" style="background: #7DA972;"></div>
+            <span class="deliverable-text"><strong>SEO/GEO:</strong> External link-building outreach to industry-relevant directories and local news</span>
           </div>
+        </div>
+        
+        <div class="deliverable-item">
+          <div class="deliverable-main">
+            <div class="deliverable-dot" style="background: #7DA972;"></div>
+            <span class="deliverable-text"><strong>GBP:</strong> "Financial Tips" Post (2x)</span>
+          </div>
+          <div class="deliverable-sub"><span>Strip the Hook from our monthly articles and turn it into a 150-word tip</span></div>
         </div>
       </div>
 
-      <!-- Month 6 -->
+      <!-- MONTH 6 -->
       <div class="month-card" style="border: 1px solid rgba(118,74,134,0.3);">
         <div class="month-badge" style="background: linear-gradient(135deg, rgba(118,74,134,0.3) 0%, rgba(118,74,134,0.1) 100%); border: 2px solid #764A86; color: #764A86;">6</div>
-        <div class="phase-tag" style="background: rgba(118,74,134,0.2);">
-          <span style="color: #764A86;">SCALE</span>
-        </div>
-        <h3 class="month-title">Compounding</h3>
-        <p class="month-subtitle">Engine</p>
+        <div class="phase-tag" style="background: rgba(118,74,134,0.2);"><span style="color: #764A86;">SCALE</span></div>
+        <h3 class="month-title">The Compounding</h3>
+        <p class="month-subtitle">Engine (July)</p>
         <div class="focus-area" style="border-left-color: #764A86;">
           <span class="focus-label">Focus: </span>
           <span class="focus-text">Analysis & Growth Planning</span>
@@ -836,35 +808,35 @@ Copy
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #764A86;"></div>
-            <span class="deliverable-text">Funnel Optimization: Review "Retire in a Weekend" conversion rates; adjust copy for performance</span>
+            <span class="deliverable-text"><strong>Funnel Optimization:</strong> Review "Retire in a Weekend" conversion rates; adjust copy for performance</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #764A86;"></div>
-            <span class="deliverable-text">Reporting: Comprehensive ROI analysis of Ads vs. Organic Leads</span>
+            <span class="deliverable-text"><strong>Reporting:</strong> Comprehensive ROI analysis of Ads vs. Organic Leads</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #764A86;"></div>
-            <span class="deliverable-text">Scalability Review: Strategy session to move budget to $5,000/mo based on Month 5 performance</span>
+            <span class="deliverable-text"><strong>Scalability Review:</strong> Strategy session to move budget to $5,000/mo based on Month 5 performance</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #764A86;"></div>
-            <span class="deliverable-text">Content: 2 Authority Articles (Focus: Long-term legacy and estate planning)</span>
+            <span class="deliverable-text"><strong>Content:</strong> 2 Authority Articles (Focus: Long-term legacy and estate planning)</span>
           </div>
         </div>
         
         <div class="deliverable-item">
           <div class="deliverable-main">
             <div class="deliverable-dot" style="background: #764A86;"></div>
-            <span class="deliverable-text">Maintenance: Full site speed audit and technical SEO health check</span>
+            <span class="deliverable-text"><strong>Maintenance:</strong> Full site speed audit and technical SEO health check</span>
           </div>
         </div>
       </div>
